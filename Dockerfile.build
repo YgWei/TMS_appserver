@@ -1,0 +1,27 @@
+###############################################################################
+# Step 1 : Builder image
+#
+FROM harbor.belstardoc.com/tms/tms_appserver:latest-test AS src
+RUN npm run build
+
+###############################################################################
+# Step 2 : Run image
+#
+FROM node:10.14.2-alpine
+RUN apk --no-cache --virtual build-dependencies add \
+    python \
+    make \
+    g++ \
+    && apk del build-dependencies
+ENV NODE_ENV=production
+WORKDIR /home/node/app
+
+COPY ./package* ./
+RUN npm install
+
+# Copy builded source from the upper builder stage
+COPY --from=src /home/node/app/build ./build
+COPY .env .
+
+# Start the app
+CMD npm start

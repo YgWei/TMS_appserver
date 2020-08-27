@@ -1,0 +1,22 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+build
+
+# Upload direcotry
+files
+logs
+uploads
+
+*.log
+
+# system
+.DS_Store

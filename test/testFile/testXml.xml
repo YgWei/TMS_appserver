@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PRINT_INFO>
+    <!-- 保单号码 -->
+    <POLICY_NO>1111111111111</POLICY_NO>
+    <!--PDF文件名 -->
+    <FILE_NAME>Policy_20160411090101_FC10700108</FILE_NAME>
+    <!-- 保单类型 个险、银代、续期、团险等-->
+    <POLICY_TYPE>1</POLICY_TYPE>
+    <!-- 出单机构编码-->
+    <BRANCH_CODE>8888</BRANCH_CODE>
+    <!-- 投保人 -->
+    <POLICY_HOLDER>XXX</POLICY_HOLDER>
+    <!-- 业务员名称 -->
+    <AGENT_NAME>XXX</AGENT_NAME>
+    <!-- 业务员编码 -->
+    <AGENT_CODE>XXX</AGENT_CODE>
+    <!-- 是否补发 -->
+    <REISSUE>Y</REISSUE>
+    
+<!-- 是否直邮 -->
+    <DIRECT_MAIL>Y</DIRECT_MAIL>
+<!-- 如果是直邮，需要下面寄送信息 -->
+    <!-- 签收人 -->
+    <SIGNER></SIGNER>
+    <!-- 地址 -->
+    <ADDRESS>****</ADDRESS>
+    <!-- 电话 -->
+    <PHONE></PHONE>
+    <!-- 邮编 -->
+    <POSTCODE></POSTCODE> 
+	
+<!--PDF内容明细，根据使用纸张不同区分不同的Part-->
+    <PAGE_LIST>
+		 <PAGE>
+		   <!-- 第1部分：白纸 -->
+		   <PAGE_NO>1</PAGE_NO>
+		   <PAGE_REVERSE>1</PAGE_REVERSE>
+		   <!-- 举例  打印纸质类型 0:白纸 1:钢线纸  2:保单页 等-->
+		   <PAPER_TYPE>0</PAPER_TYPE>
+		 </PAGE>
+	</PAGE_LIST>
+</PRINT_INFO>

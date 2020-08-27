@@ -1,0 +1,105 @@
+import chai from 'chai'
+import chaiUUID from 'chai-uuid'
+import { describe, it, before, after } from 'mocha'
+// import supertest from 'supertest'
+import createServer from '../../index'
+// import { adminJWT } from './Login.spec'
+import { recover } from '../init/connection'
+
+// const { expect } = chai
+chai.use(chaiUUID)
+
+describe('ProductOwner Controller', () => {
+  let app
+
+  before(async () => {
+    app = await createServer()
+  })
+  after(async () => {
+    await recover(['ProductOwner'])
+    await app.close()
+  })
+
+  it(`#GET, /api/productowner:\n\t Find test.`, async function () {
+    // const home = await supertest(app).get(`/api/productowner`).set('Authorization', `bearer ${adminJWT}`).query({
+    //   start: 0, limit: 10
+    // })
+    // expect(home.status).to.deep.equal(200)
+    // expect(home.body.data.count).to.deep.equal(1)
+    // expect(home.body.data.data[0]).to.deep.equal(['uuid', 'name', 'phone', 'email'])
+  })
+
+  it(`#GET, /api/productowner/150592:\n\t Read test.`, async function () {
+    // const home = await supertest(app).get(`/api/productowner/150592`).set('Authorization', `bearer ${adminJWT}`)
+    // expect(home.status).to.deep.equal(200)
+    // expect(home.body.data.uuid).to.deep.equal('150592')
+    // expect(home.body.data.workCenterUuid).to.deep.equal(createBody.workCenterUuid)
+    // expect(home.body.data.templateUuid).to.deep.equal(createBody.templateUuid)
+    // expect(home.body.data.product).to.deep.equal(createBody.product)
+    // expect(home.body.data.email).to.deep.equal(createBody.email)
+    // expect(home.body.data.phone).to.deep.equal(createBody.phone)
+  })
+
+  describe('Create a new ProductOwner', () => {
+    it(`#POST, /api/productowner:\n\t Create test.`, async function () {
+      // const home = await supertest(app).post(`/api/productowner`).set('Authorization', `bearer ${adminJWT}`).send(createBody)
+      // expect(home.status).to.deep.equal(200)
+      // tempProductOwnerUUid = home.body.data.uuid
+      // expect(home.body.data.workCenterUuid).to.deep.equal(createBody.workCenterUuid)
+      // expect(home.body.data.templateUuid).to.deep.equal(createBody.templateUuid)
+      // expect(home.body.data.product).to.deep.equal(createBody.product)
+      // expect(home.body.data.email).to.deep.equal(createBody.email)
+      // expect(home.body.data.phone).to.deep.equal(createBody.phone)
+    })
+
+    it(`#GET, /api/productowner:\n\t Create check.`, async function () {
+      // const home = await supertest(app).get(`/api/productowner`).set('Authorization', `bearer ${adminJWT}`).query({
+      //   start: 0, limit: 10
+      // })
+      // expect(home.status).to.deep.equal(200)
+      // expect(home.body.data.count).to.deep.equal(1)
+      // expect(home.body.data.data[0].workCenterUuid).to.deep.equal(createBody.workCenterUuid)
+      // expect(home.body.data.data[0].templateUuid).to.deep.equal(createBody.templateUuid)
+      // expect(home.body.data.data[0].product).to.deep.equal(createBody.product)
+      // expect(home.body.data.data[0].email).to.deep.equal(createBody.email)
+      // expect(home.body.data.data[0].phone).to.deep.equal(createBody.phone)
+    })
+  })
+
+  it(`#PUT, /api/productowner/{uuid}:\n\t Update test.`, async function () {
+    // const home = await supertest(app).put(`/api/productowner/${tempProductOwnerUUid}`).set('Authorization', `bearer ${adminJWT}`).send(updateBody)
+    // expect(home.status).to.deep.equal(200)
+    // expect(home.body.data.uuid).to.deep.equal(tempProductOwnerUUid)
+    // expect(home.body.data.workCenterUuid).to.deep.equal(updateBody.workCenterUuid)
+    // expect(home.body.data.templateUuid).to.deep.equal(updateBody.templateUuid)
+    // expect(home.body.data.product).to.deep.equal(updateBody.product)
+    // expect(home.body.data.email).to.deep.equal(updateBody.email)
+    // expect(home.body.data.phone).to.deep.equal(updateBody.phone)
+  })
+
+  it(`#GET, /api/productowner/{uuid}:\n\t Update check.`, async function () {
+    // const home = await supertest(app).get(`/api/productowner/${tempProductOwnerUUid}`).set('Authorization', `bearer ${adminJWT}`)
+    // expect(home.status).to.deep.equal(200)
+    // expect(home.body.data.uuid).to.deep.equal(tempProductOwnerUUid)
+    // expect(home.body.data.workCenterUuid).to.deep.equal(updateBody.workCenterUuid)
+    // expect(home.body.data.templateUuid).to.deep.equal(updateBody.templateUuid)
+    // expect(home.body.data.product).to.deep.equal(updateBody.product)
+    // expect(home.body.data.email).to.deep.equal(updateBody.email)
+    // expect(home.body.data.phone).to.deep.equal(updateBody.phone)
+  })
+
+  it(`#DELETE, /api/productowner/{uuid}:\n\t Finally, Delete test.`, async function () {
+    // const homeToDelete = await supertest(app).delete(`/api/productowner/${tempProductOwnerUUid}`).set('Authorization', `bearer ${adminJWT}`)
+    // expect(homeToDelete.status).to.deep.equal(200)
+    // expect(homeToDelete.body.data.uuid).to.deep.equal(tempProductOwnerUUid)
+    // expect(homeToDelete.body.data.invalid).to.deep.equal(true)
+  })
+
+  it(`#GET, /api/productowner:\n\t Delete check.`, async function () {
+    // const home = await supertest(app).get(`/api/productowner`).set('Authorization', `bearer ${adminJWT}`).query({
+    //   start: 0, limit: 10
+    // })
+    // expect(home.status).to.deep.equal(200)
+    // expect(home.body.data.count).to.deep.equal(0)
+  })
+})

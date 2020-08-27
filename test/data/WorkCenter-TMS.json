@@ -1,0 +1,15 @@
+[
+  {
+    "_id": "WorkCenter/21789428",
+    "_rev": "_aNaQADK--_",
+    "_key": "21789428",
+    "uuid": "928fd94e-542f-4443-a11b-1ef4ac87b844",
+    "name": "北京",
+    "region": "北京",
+    "createTime": "2020-01-01T00:00:00.000Z",
+    "modifyTime": "2020-01-01T00:00:00.000Z",
+    "createUser": "user",
+    "modifyUser": "user",
+    "invalid":false
+  }
+]

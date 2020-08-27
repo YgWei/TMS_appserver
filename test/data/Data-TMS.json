@@ -1,0 +1,18 @@
+[
+  {
+    "_id":"Data/107494",
+    "_rev":"_aWWIqci---",
+    "_key":"107494",
+    "productionKey": "68014",
+    "name": "20200323",
+    "fileName": "PDF伴随文档说明-2018.05.08.xml",
+    "cloudStorageUuid": "5e78468115475e0017bb2efa",
+    "md5": "32ff97fd2946e69395d78a26c8453cad",
+    "description": "eee",
+    "createTime": "2020-03-23T05:17:53.580Z",
+    "modifyTime": "2020-03-23T05:17:53.580Z",
+    "createUser": "admin",
+    "modifyUser": "admin",
+    "invalid":false
+  }
+]
